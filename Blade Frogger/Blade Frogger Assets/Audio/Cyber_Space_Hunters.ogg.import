@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Cyber_Space_Hunters.ogg-070b67afacb057b65fefa88197f11900.oggstr"
+
+[deps]
+
+source_file="res://Blade Frogger Assets/Audio/Cyber_Space_Hunters.ogg"
+dest_files=[ "res://.import/Cyber_Space_Hunters.ogg-070b67afacb057b65fefa88197f11900.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

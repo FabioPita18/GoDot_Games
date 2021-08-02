@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Blade Frogger Assets/Level/Objects.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 12, 9 )
+
+[node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2( -3, 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -1 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 130.701, 20.4918, 28.1406, 39.5166 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1, -1 )
+shape = SubResource( 1 )

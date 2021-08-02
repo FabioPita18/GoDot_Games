@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/win.ogg-4783a041abc310e5b35d82fcc943a2e9.oggstr"
+
+[deps]
+
+source_file="res://Blade Frogger Assets/Audio/win.ogg"
+dest_files=[ "res://.import/win.ogg-4783a041abc310e5b35d82fcc943a2e9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://GameScreen/GameScreen.gd" type="Script" id=1]
+[ext_resource path="res://Blade Frogger Assets/Font/BLADRMF_.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://Blade Frogger Assets/Screens/SideWalkTexture.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 26
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 80
+font_data = ExtResource( 2 )
+
+[node name="GameScreen" type="Control"]
+margin_right = 1023.0
+margin_bottom = 596.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 1026.0
+margin_bottom = 605.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -109.269
+margin_top = 301.466
+margin_right = 84.7307
+margin_bottom = 332.466
+custom_fonts/font = SubResource( 1 )
+text = "Test Score"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+margin_left = 154.0
+margin_top = 174.0
+margin_right = 968.0
+margin_bottom = 264.0
+custom_fonts/font = SubResource( 2 )
+text = "blade Frogger"
+__meta__ = {
+"_edit_use_anchors_": false
+}
