@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/07 - Town.ogg-8e716b827ba83a5a6735e7345a546e4e.oggstr"
+
+[deps]
+
+source_file="res://VegetableHunter_Assets/Audio/07 - Town.ogg"
+dest_files=[ "res://.import/07 - Town.ogg-8e716b827ba83a5a6735e7345a546e4e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://VegetableHunter_Assets/Vegetables/corn.glb" type="PackedScene" id=1]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.987577
+height = 2.07043
+
+[node name="Vegatable" type="RigidBody"]
+
+[node name="corn" parent="." instance=ExtResource( 1 )]
+transform = Transform( 12, 0, 0, 0, 12, 0, 0, 0, 12, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.00726054, 0.999974, 0, -0.999974, -0.00726054, 0, 1.88625, 0 )
+shape = SubResource( 1 )

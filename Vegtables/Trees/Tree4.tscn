@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://VegetableHunter_Assets/World/tree_oak.glb" type="PackedScene" id=1]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.323718
+height = 1.75385
+
+[node name="Tree4" type="StaticBody"]
+
+[node name="tree_oak" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.0252871, 0.99968, 0, -0.99968, -0.0252871, 0, 0.840765, 0 )
+shape = SubResource( 1 )
