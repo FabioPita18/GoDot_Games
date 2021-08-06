@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/shotgun.wav-69381b2aecdf585f71b5c4c9331ce5b7.sample"
+
+[deps]
+
+source_file="res://VegetableRain_Assets/Audio/shotgun.wav"
+dest_files=[ "res://.import/shotgun.wav-69381b2aecdf585f71b5c4c9331ce5b7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

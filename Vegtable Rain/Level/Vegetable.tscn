@@ -1,0 +1,95 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://VegetableRain_Assets/Vegetables/corn.glb" type="PackedScene" id=1]
+[ext_resource path="res://VegetableRain_Assets/Vegetables/appleHalf.glb" type="PackedScene" id=2]
+[ext_resource path="res://VegetableRain_Assets/Vegetables/avocadoHalf.glb" type="PackedScene" id=3]
+[ext_resource path="res://VegetableRain_Assets/Vegetables/broccoli.glb" type="PackedScene" id=4]
+[ext_resource path="res://VegetableRain_Assets/Vegetables/cauliflower.glb" type="PackedScene" id=5]
+[ext_resource path="res://VegetableRain_Assets/Vegetables/onionHalf.glb" type="PackedScene" id=6]
+[ext_resource path="res://VegetableRain_Assets/Vegetables/coconutHalf.glb" type="PackedScene" id=7]
+[ext_resource path="res://VegetableRain_Assets/Vegetables/paprika.glb" type="PackedScene" id=8]
+[ext_resource path="res://VegetableRain_Assets/Vegetables/mushroom.glb" type="PackedScene" id=9]
+[ext_resource path="res://Level/Vegetable.gd" type="Script" id=10]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 1.40924
+height = 1.0597
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0.437037, 0.822222 )
+colors = PoolColorArray( 0.760742, 0.114552, 0.114552, 1, 0.874023, 0.52254, 0.173792, 1 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+
+[sub_resource type="ParticlesMaterial" id=4]
+direction = Vector3( 0, 0, 0 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 10.0
+initial_velocity_random = 0.57
+color_ramp = SubResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=5]
+vertex_color_use_as_albedo = true
+
+[sub_resource type="CubeMesh" id=6]
+material = SubResource( 5 )
+
+[node name="Vegetable" type="RigidBody"]
+script = ExtResource( 10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.90437, 0 )
+shape = SubResource( 1 )
+
+[node name="Object" type="Spatial" parent="."]
+transform = Transform( 12, 0, 0, 0, 12, 0, 0, 0, 12, 0, 0, 0 )
+
+[node name="appleHalf" parent="Object" instance=ExtResource( 2 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -0.0499215, 0.0795374, 0 )
+visible = false
+
+[node name="avocadoHalf" parent="Object" instance=ExtResource( 3 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0.0590541, 0 )
+visible = false
+
+[node name="broccoli" parent="Object" instance=ExtResource( 4 )]
+transform = Transform( 0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0 )
+visible = false
+
+[node name="cauliflower" parent="Object" instance=ExtResource( 5 )]
+transform = Transform( 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
+visible = false
+
+[node name="coconutHalf" parent="Object" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0827515, 0 )
+visible = false
+
+[node name="mushroom" parent="Object" instance=ExtResource( 9 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.00305419, 0 )
+visible = false
+
+[node name="onionHalf" parent="Object" instance=ExtResource( 6 )]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.0509693, -0.007, 0 )
+visible = false
+
+[node name="paprika" parent="Object" instance=ExtResource( 8 )]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.0339396, 0 )
+visible = false
+
+[node name="corn" parent="Object" instance=ExtResource( 1 )]
+visible = false
+
+[node name="Particles" type="Particles" parent="."]
+emitting = false
+amount = 40
+one_shot = true
+local_coords = false
+process_material = SubResource( 4 )
+draw_pass_1 = SubResource( 6 )
+
+[node name="VegetableDeathTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+[connection signal="timeout" from="VegetableDeathTimer" to="." method="_on_VegetableDeathTimer_timeout"]

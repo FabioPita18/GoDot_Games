@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://VegetableRain_Assets/World/tree_default.glb" type="PackedScene" id=1]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.201248
+height = 2.1124
+
+[node name="Tree2" type="StaticBody"]
+
+[node name="tree_default" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 1.13572, 0 )
+shape = SubResource( 1 )

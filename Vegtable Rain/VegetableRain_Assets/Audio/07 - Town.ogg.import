@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/07 - Town.ogg-6c5400871b2c7c1c89a683eb4e67b10b.oggstr"
+
+[deps]
+
+source_file="res://VegetableRain_Assets/Audio/07 - Town.ogg"
+dest_files=[ "res://.import/07 - Town.ogg-6c5400871b2c7c1c89a683eb4e67b10b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
